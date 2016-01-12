@@ -53,7 +53,10 @@
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/images/" mapping="/images/**" />
-	<mvc:resources location="/WEB-INF/plugin/" mapping="/plugin/**" />
+	<mvc:resources location="/WEB-INF/plugin/" mapping="/js/**" />
+	<mvc:resources location="/WEB-INF/core/" mapping="/core/**" />
+	<mvc:resources location="/WEB-INF/themes/" mapping="/thems/**" />
+	<mvc:resources location="/WEB-INF/uaas/" mapping="/uaas/**" />
 
 	<!-- 拦截器 -->
 	<mvc:interceptors>

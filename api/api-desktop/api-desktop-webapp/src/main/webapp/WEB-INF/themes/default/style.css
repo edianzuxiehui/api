@@ -1,0 +1,539 @@
+/*
+**重定义标签样式
+*/
+span { font-size: 12px }
+td { font-size: 12px }
+img { border:0px none;  }
+frame{ margin: 0px;scrolling:auto;}
+fieldset{text-align:center;width:98%;padding:10px;}
+a {text-decoration:none;color:#0000CC;behavior: url("/smice/script/href.htc");}
+a:hover{text-decoration:none; color:#FF0000}
+select{BACKGROUND-COLOR: white; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px;height:22px}
+INPUT.readonly {BACKGROUND-COLOR: #f0f0f0;}
+INPUT.disabled {background-color: #f0f0f0;}/*dddddd*/
+input { border:1px #2373A8 solid; }
+BODY {MARGIN: 0px; BORDER: 0px;FONT-FAMILY: 宋体,Arial; scroll:auto; overflow:auto;background-color: white}/* #D6D3CE,#DFF0F5*/
+#modDescription{ display:none;}
+#description{ color:blue;font-size:14px;}
+LEGEND{ font-weight:bold;}
+TABLE HR {BORDER-RIGHT: 0px; BORDER-TOP: buttonshadow 1px solid; BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: buttonhighlight 1px solid; HEIGHT: 2px}
+/*
+**特殊字体
+*/
+.green{color:green;}
+.greenBold{ color:green;font-weight:bold}
+.blue{ color:blue;}
+.blueBold{ color:blue;font-weight:bold;}
+.darkBlueBold{ color:#000080;font-weight:bold}
+.darkBlue{ color:#000080;}
+.white14{font-size:14px;color:#FFFFFF;}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #f5f9ff;
+	SCROLLBAR-FACE-COLOR: #e3ebfe;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #84adff;
+	SCROLLBAR-3DLIGHT-COLOR: #84adff;
+	SCROLLBAR-ARROW-COLOR: #8e3ebfe;
+	SCROLLBAR-TRACK-COLOR: #f5f9ff;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	SCROLLBAR-BASE-COLOR: #ffffff;
+}
+/*
+**用于body、frame、panel等框架的样式
+*/
+.bodyImgBg{
+	OVERFLOW: auto;
+	BACKGROUND-COLOR:#FFFFFF;
+	MARGIN: 0px; BORDER: 0px; FONT-FAMILY: 宋体,Arial;
+	background-image: url(/smice/images/common/body_bg.gif);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.startBody{
+	BACKGROUND-COLOR:#2C7FB5;
+	background-image: url(/smice/images/start/mbg.gif);
+	background-repeat: repeat-x;
+}
+.startMain{
+	BACKGROUND-COLOR:#2F84BD;
+	background-image: url(/smice/images/start/mmbg.gif);
+	background-repeat: repeat-x;
+}
+.con{height:100%;width:100%;}/*mainframe内html内容外的td标签*/
+.brsBody{height:100%;width:100%;}/*mainframe内html内容外的td标签*/
+.panelBg{BACKGROUND-COLOR:#DFF0F5;}/*D4D0C8*/
+.dialogBg {BACKGROUND-COLOR:#DFF0F5;overflow:hidden;}/*D4D0C8*/
+.dialogPanel {
+	border-top: #FFFFFF -1px solid;
+	border-left:2px solid #FFFFFF;
+    border-right: 2px solid #DFF0F5;
+    border-bottom: 2px solid #DFF0F5;
+	background-color: #DFF0F5;/*D4D0C8*/
+	height:100%;
+}
+/*
+**Tab的样式
+*/
+.mainMenu2{
+	color:#000000;cursor:hand;height: 22px;
+	background-color: #EEEEEE;
+	padding-top:6px;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    border-right: 2px solid #DFF0F5;
+}
+.mainMenu2Over{
+	color:#0000ff;cursor:hand; height: 22px;
+	background-color: #EEEEEE;
+	padding-top:6px;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    border-right: 2px solid #DFF0F5;
+}
+.mainMenu2Visited{
+	height:22px;color:#000000;cursor:hand;
+	background-color: #DFF0F5;
+	padding-top:5px;
+    border-right: 2px solid #DFF0F5;
+    border-left: 2px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #DFF0F5;
+}
+.tailtd {
+	border-color: #000000 #000000 #333333;
+	height:22px;
+}
+.tab_e {
+	border-top: #FFFFFF -1px solid;
+	border-left:2px solid #FFFFFF;
+    border-right: 2px solid #DFF0F5;
+    border-bottom: 0px solid #DFF0F5;
+	background-color: #DFF0F5;
+	height:18px;
+}
+.spaceWide {
+	width: 2px;
+	height: 22px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.btn{ 
+PADDING-RIGHT: 2px; 
+PADDING-LEFT: 2px; 
+FONT-SIZE: 12px; 
+CURSOR: hand; 
+COLOR: black; 
+background-color:#D1DEEF 
+}
+
+/*
+**列表、表格的样式
+*/
+
+.magicHead{
+	 cursor: default;
+}
+
+.tableScroll{
+	border:#999999 1px solid;
+	/*
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #b9b9bb;
+	SCROLLBAR-SHADOW-COLOR: #b9b9bb;
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR: #b9b9bb;
+	SCROLLBAR-TRACK-COLOR: #ffffff;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	*/
+	background-color: #ffffff;
+}
+.tableScrollHead{
+	border-left:#999999 1px solid;
+	border-right:#999999 1px solid;
+	border-top:#999999 1px solid;
+	/*background-color: #000000;*/
+	/*
+	SCROLLBAR-FACE-COLOR: #DFF0F5;
+	SCROLLBAR-HIGHLIGHT-COLOR: #DFF0F5;
+	SCROLLBAR-SHADOW-COLOR: #DFF0F5;
+	SCROLLBAR-3DLIGHT-COLOR: #DFF0F5;
+	SCROLLBAR-ARROW-COLOR: #DFF0F5;
+	SCROLLBAR-TRACK-COLOR: #DFF0F5;
+	SCROLLBAR-DARKSHADOW-COLOR: #DFF0F5;
+	*/
+}
+TABLE.listHead TD{
+	BORDER-LEFT: #ffffff 1px solid;
+	BORDER-TOP: #ffffff 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 23px;font-weight:bold;
+	word-break:break-all;
+}
+TABLE.listHead{
+	background-image: url(../images/bg_bg01.gif);
+	height: 25px;
+	text-align: center;
+	font-size: 12px;
+	word-break: keep-all;
+	word-wrap : normal;
+	white-space: nowrap;
+}
+.listResoult{
+	FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; PADDING-TOP: 10px;
+}
+TABLE.list {
+	BACKGROUND-COLOR: #ffffff;
+	BORDER:0px;
+	WIDTH: 100%
+}
+TABLE.list CAPTION {
+	FONT-WEIGHT: bold; PADDING-BOTTOM: 8px; PADDING-TOP: 10px
+}
+
+TABLE.list TD {
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 22px;
+	word-break:break-all;
+}
+
+.listLeft{
+	BORDER-LEFT: #ffffff 1px solid;
+	BORDER-TOP: #ffffff 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	BACKGROUND-COLOR: #DFF0F5;
+	word-break:break-all;
+}
+
+.tipHead{
+	background-image: url(../images/bg_bg01.gif);
+	height: 25px;
+	text-align: left;
+	font-size: 12px;
+	word-break: keep-all;
+	word-wrap : normal;
+	white-space: nowrap;
+}
+
+TABLE.listtitle {
+	background:#529B93;
+	width:100%; height:20px;
+	BORDER: #c6c6c6 0px solid;
+}
+TABLE.listtitle TD {
+	background:#529B93;padding-left:5px;padding-top:3px;/*7491DC->DFF0F5,#73B3E2*/
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#529B93', EndColorStr='#FFFFFF');
+	FONT-weight:bold; font-size:12px; WIDTH:100%; COLOR:white;
+}
+.selectedRow {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; height: 22px; PADDING-BOTTOM: 1px;PADDING-TOP: 1px;BACKGROUND-COLOR: #E3EEFF;cursor:hand;
+}
+.rowOver {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; height: 22px; PADDING-BOTTOM: 1px;PADDING-TOP: 1px;BACKGROUND-COLOR: #E3EEFF;cursor:hand;
+}
+.oddtr {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; height: 22px; PADDING-BOTTOM: 1px;PADDING-TOP: 1px;BACKGROUND-COLOR: #FFFFFF;cursor:hand;
+}
+.eventr {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; height: 22px; PADDING-BOTTOM: 1px;PADDING-TOP: 1px;BACKGROUND-COLOR: #EFEFEF;cursor:hand;
+}
+
+TABLE.plist {
+	font-size:12px;
+	BACKGROUND-COLOR: #FFFFFF;
+	BORDER-TOP: #999999 1px solid;
+	BORDER-LEFT: #999999 1px solid;
+	WIDTH: 98%
+}
+TABLE.plist1 {
+	font-size:12px;
+	BACKGROUND-COLOR: #FFFFFF;
+	BORDER-TOP: #999999 1px solid;
+	BORDER-LEFT: #999999 1px solid;
+	
+}
+TABLE.plist1 TH {
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 20px;
+	word-break:break-all;
+	BACKGROUND-COLOR: #EFEFEF;
+}
+
+TABLE.plist1 TD {
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 20px;
+	word-break:break-all;
+}
+
+TABLE.plist TH {
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 20px;
+	word-break:break-all;
+	BACKGROUND-COLOR: #EFEFEF;
+}
+
+TABLE.plist TD {
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;
+	height: 20px;
+	word-break:break-all;
+}
+/*
+**房态图
+*/
+TABLE.room {
+	BACKGROUND-COLOR: #ffffff;
+}
+TABLE.room TD {
+	BORDER: #666666 1px solid;
+	padding: 2px;
+	height: 22px;
+	word-break:no-break;
+}
+.fangtai1 {  background-color: #D2E8F9 ;cursor:hand ;width:55px}/*预定*/
+.fangtai2 {  background-color: #CCCCFF ;cursor:hand ;width:55px}/*入住*/
+.fangtai3 {  background-color: #CCFFCC ;cursor:hand ;width:55px}/*可用*/
+.fangtai4 {  background-color: #FFFFCC ;cursor:hand ;width:55px}/*备用*/
+.fangtai5 {  background-color: #CCFFFF ;cursor:hand ;width:55px}/*走客*/
+.fangtai6 {  background-color: #FFEECC ;cursor:hand ;width:55px}/*自用*/
+.fangtai7 {  background-color: #99CC99 ;cursor:hand ;width:55px}/*维修*/
+.ftover{  background-color: #FFFFFF ;cursor:hand  ;width:55px}
+
+/*
+**文字、背景样式
+*/
+.hand{cursor:hand;}
+.blink {  color: #0000CC; text-decoration: none; cursor: hand}
+.blink:hover {  color: #0033FF; text-decoration: none; cursor: hand}
+.wlink {  color: #FFFFFF; text-decoration: none}
+.wlink:hover {  color: #FFFF99; text-decoration: none}
+.white {  color: #FFFFFF}
+.wlink14 {  color: #FFFFFF; text-decoration: none; font-size:14px;}
+.wlink14:hover {  color: #FFFF99; text-decoration: none; font-size:14px;}
+.f14 { font-size:14px;}
+.startTitle{ font-size:14px; color:#054571;font-weight:bold;line-height:30px;}
+.repeat_x {  background-repeat: repeat-x}
+/*
+**表单样式
+*/
+TABLE.searchbox TD {
+	BORDER-TOP: white 5px solid; BORDER-LEFT: white 10px solid; BORDER-BOTTOM: white 5px solid; BACKGROUND-COLOR: white;
+}
+TABLE.searchbox {BORDER-top: #c6c6c6 1px solid;BORDER-bottom: #c6c6c6 1px solid;}
+.fiterBarH{
+	CURSOR: hand;PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#FFFFFF', EndColorStr='#7491DC'); LEFT: 0px; PADDING-BOTTOM: 2px; FONT: bold 8pt arial; WIDTH: 100%; COLOR: black; PADDING-TOP: 2px; POSITION: relative; TOP: 0px
+}
+.half{ widht:100% ;BORDER-bottom: #c6c6c6 1px solid;BACKGROUND-COLOR: #DFF0F5}
+TABLE.forms { width: 98%;}
+TABLE.forms TD { font-size: 12px; color: #000000; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px}
+
+TABLE.formsBlue { width: 98%;}
+TABLE.formsBlue TD { font-size: 12px;  padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px}
+
+TABLE.nopad {}
+TABLE.nopad TD { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
+
+.cf {  border: 1px #999999 solid; text-align:center}
+.hrc {  color: #993333; border-style: dotted}
+.leg_t{  cursor:hand ;}
+.red{ font-size:14px; color:#FF0000;}
+.navPoint {FONT-SIZE: 12px; CURSOR: hand; COLOR: #416DCA; FONT-FAMILY: Webdings }
+.full {  width: 100%}
+.bw1 {  border: 1px #CCCCCC solid; width: 98%; left: 2px; top: 2px; clip:  rect(   ); padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px}
+.noborder { border: #CCCCCC; border-style: solid; border-width: 1px;width:100%}
+.noboard {
+	width:100%;
+	border-top: #FFFFFF solid 0px;
+	border-left:#FFFFFF solid 0px;
+    border-right:#FFFFFF solid 0px;
+    border-bottom:#CCCCCC solid 1px ;
+}
+.noborderf { border: #CCCCCC; border-style: solid; border-width: 1px;}
+.f0f0f0 {  background-color: #DFF0F5;}
+.textInput { border: #666666; border-style: solid; border-width: 1px;}
+.button {  font-size: 12px; line-height: 20px; white-space: nowrap; cursor: hand}
+.imgButton{cursor: hand;border:0px none;}
+/*
+**树
+*/
+.webfx-tree-container {font: 14px;white-space: nowrap;}
+.webfx-tree-item {font: 14px;color: black;white-space: nowrap;}
+.webfx-tree-item a, .webfx-tree-item a:active, .webfx-tree-item a:hover {
+}
+.webfx-tree-item a {color: black;text-decoration: none;}
+.webfx-tree-item a:hover {color: blue;text-decoration: none;}
+.webfx-tree-item a:active {background: highlight;color: highlighttext;text-decoration: none;}
+.webfx-tree-item img {border: 0px;}
+.webfx-tree-icon {
+}
+.webfx-tree-item a.selected {color: #FFFFFF;background: #000099;}
+.webfx-tree-item a.selected:hover {color: #FFFFFF;text-decoration: none;background: #000099;}
+.webfx-tree-item a.selected-inactive {color: #FFFFFF;background: #000099;}
+.webfx-tree-item a.selected-inactive:hover {color: #FFFFFF;background: #000099;}
+.tree-bg{MARGIN: 0px;background-image: url();background-color:#eeeeee;overflow:auto; border:1px  solid #333333;}
+/*
+**右击菜单
+*/
+.menuitems {
+	font-size:12px; BACKGROUND-COLOR: buttonface; PADDING-BOTTOM: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 3px; cursor:hand;
+}
+.toolBar {
+	cursor: default;position: absolute;
+	width: 120px;background-color:menu;font-family:宋体;font-size:12px;line-height:16px;
+	border: 1 solid buttonface;border: 2 outset buttonhighlight;
+	display: none;
+	}
+/*
+**日历
+*/
+.datedialog {
+	BACKGROUND: #F4F4F4;BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 9pt
+}
+.datedialog TH {
+	BACKGROUND: #ddd9cd; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px; COLOR: #ffffff; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.datedialog TD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.datedialog TD A {
+	COLOR: black; TEXT-DECORATION: none
+}
+/*
+**树形列表
+*/
+TABLE.treeTable {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #333333 0px solid; BORDER-LEFT: #333333 0px solid; BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; WIDTH: 96%
+}
+TR.tableTreeHead {
+	BACKGROUND-COLOR: #EFEFEF; BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; FONT-SIZE: 13px; HEIGHT: 24px; WHITE-SPACE: nowrap;FONT-WEIGHT: bold;
+}
+TD.HeadCell {
+	text-align:center;
+}
+TABLE.treeTable TD {
+	BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid;
+}
+TD.indexHead{
+	text-align:center;
+}
+TD.indexRow{
+	text-align:center;
+}
+
+IMG.JTT_SIcon{
+	BORDER-RIGHT: 0px;BORDER-TOP: 0px;VERTICAL-ALIGN: bottom;BORDER-LEFT: 0px;WIDTH: 18px;BORDER-BOTTOM: 0px;HEIGHT: 18px
+}
+
+IMG.JTT_SPlusMinus{
+	BORDER-RIGHT: 0px;BORDER-TOP: 0px;VERTICAL-ALIGN: bottom;BORDER-LEFT: 0px;WIDTH: 18px;BORDER-BOTTOM: 0px;HEIGHT: 18px
+}
+SPAN.JTT_STreeText{
+	position:relative;margin-top :3px;	margin-bottom:1px;		textAlign:center; font-size:12px;height:15px;cursor: hand;
+}
+SPAN.JTT_STreeNode{
+	vertical-align:middle;height:19px;
+}
+/*
+**内容框格式
+*/
+TABLE.context TD {
+	BORDER-TOP: #DFF0F5 5px solid; BORDER-LEFT: #DFF0F5 10px solid; BORDER-BOTTOM: #DFF0F5 5px solid; BACKGROUND-COLOR: #DFF0F5
+}
+TABLE.context {BORDER: #c6c6c6 1px solid;}
+.fiterBarH{
+	CURSOR: hand;PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#FFFFFF', EndColorStr='#7491DC'); LEFT: 0px; PADDING-BOTTOM: 2px; FONT: bold 8pt arial; WIDTH: 100%; COLOR: black; PADDING-TOP: 2px; POSITION: relative; TOP: 0px
+}
+.fiterBarT{
+	CURSOR: hand;background:#7491dc;
+}
+/*
+**window风格bar
+*/
+TABLE.buttonBar{
+	background:menu;
+	height:22px;
+	border-bottom:1px solid #000000;
+	border-left:1px solid #FFFFFF;
+	border-top:1px solid #FFFFFF;
+	border-right:1px solid #000000;
+}
+TABLE.buttonBar TD{
+	padding-left:5px;padding-right:5px;
+	border-bottom:1px solid #999999;
+	border-left:0px solid #dddddd;
+	border-top:1px solid #dddddd;
+	border-right:1px solid #999999;
+}
+/*
+**表单说明抬头
+*/
+TABLE.infotitle TD {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#7491DC', EndColorStr='#FFFFFF');
+	PADDING-LEFT:2px;line-height:20px; FONT-weight:bold; font-size:14px; WIDTH:100%; COLOR:white;
+}
+TABLE.infotitle {
+	width:100%;BORDER-RIGHT: #c6c6c6 1px solid; BORDER-TOP: #c6c6c6 1px solid; BORDER-LEFT: #c6c6c6 1px solid; BORDER-BOTTOM: #c6c6c6 1px solid
+}
+
+/*
+**报表抬头
+*/
+.reportTitle{
+	font-weight:bold;font-size:18px;
+}
+
+/*
+**内凹区域边框
+*/
+.areaTable{
+	width:100%;
+	BORDER-LEFT: black 1px solid;BORDER-TOP: black 1px solid; BORDER-RIGHT: #FFFFFF 1px solid;BORDER-BOTTOM: #FFFFFF 1px solid;
+}
+.areaTableIn{
+	BORDER-LEFT: #999999 1px solid;BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #CCCCCC 1px solid;BORDER-BOTTOM: #CCCCCC 1px solid;background:#FFFFFF;
+}
+
+/*
+*  下拉框可输入样式*
+*/
+.comboSelect{
+  position: absolute;
+  font-size: 12px;
+  width: 185px;
+  clip:rect(2 185 20 160);
+}
+
+.comboSelect2{
+  position: absolute;
+  font-size: 12px;
+  width: 220px;
+  clip:rect(2 220 20 200);
+}
+
+.comboTxt{
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #CDCDCD;
+  background-color: #ffffff;
+  width: 185px;
+}
+
+.blueBtn {
+  background-color:#C3DAF5;
+  padding-top: 2px;
+  border: #2C59AA 1px solid;
+  font-size: 13px;
+  cursor: hand;
+background-image: url(../images/bott_bg.gif);
+background-repeat: repeat-x;
+}
