@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 权限映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DRightDAO">
+
+	<!-- 获取权限语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DRight">
+		select id
+		, menu_id
+		, name
+		, href
+		, description
+		from t_right
+		where id = #{id}
+	</select>
+
+	<!-- 根据用户标识和视图名称获取权限语句 -->
+	<select id="queryByUserIdAndName" resultType="com.xiehui.api.permission.repository.database.DRight">
+		select
+		tr.id
+		, tr.menu_id
+		, tr.name
+		, tr.href
+		, tr.description
+		from t_user as tu
+		left join t_role as role on role.id =
+		tu.role_id
+		left join t_role_right as rr on role.id = rr.role_id
+		left join t_right as tr on tr.id = rr.right_id
+		left join
+		t_menu as tm on tm.id = tr.menu_id
+		where
+		tu.id = #{userId}
+		<if test="href != null">
+			and tm.href = #{href}
+		</if>
+	</select>
+
+	<!-- 根据用户标识和请求URL获取权限存在个数 -->
+	<select id="queryByUserIdAndUrl" resultType="java.lang.Integer">
+		SELECT
+		count(1) fun_count
+		FROM
+		t_user AS tu
+		LEFT JOIN t_role AS role ON
+		role.id = tu.role_id
+		LEFT JOIN t_role_right AS rr ON role.id = rr.role_id
+		LEFT JOIN t_right AS tr ON tr.id = rr.right_id
+		WHERE
+		tu.id = #{userId} and tr.href = #{href}
+	</select>
+
+</mapper>

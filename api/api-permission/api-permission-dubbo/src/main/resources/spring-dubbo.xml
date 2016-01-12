@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	   http://code.alibabatech.com/schema/dubbo
+	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<!-- Dubbo服务相关 -->
+	<dubbo:protocol name="dubbo" port="20701" serialization="hessian2" />
+	<dubbo:provider charset="UTF-8" delay="-1" timeout="600000" retries="0" />
+
+	<!-- Dubbo服务声明 -->
+	<dubbo:service ref="userService" interface="com.xiehui.api.permission.service.user.UserService" version="1.0.0" />
+	<dubbo:service ref="roleService" interface="com.xiehui.api.permission.service.role.RoleService" version="1.0.0" />
+	<dubbo:service ref="menuService" interface="com.xiehui.api.permission.service.menu.MenuService" version="1.0.0" />
+	<dubbo:service ref="rightService" interface="com.xiehui.api.permission.service.right.RightService"
+		version="1.0.0" />
+</beans>

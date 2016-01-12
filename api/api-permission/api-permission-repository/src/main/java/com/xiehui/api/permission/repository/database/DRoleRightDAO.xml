@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 角色权限映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DRoleRightDAO">
+
+	<!-- 获取角色权限语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DRoleRight">
+		select role_id
+		, right_id
+		, created_time
+		from t_role_right
+		where role_id = #{roleId}
+		and right_id = #{rightId}
+	</select>
+
+	<!-- 创建角色权限语句 -->
+	<insert id="create">
+		insert into t_role_right(
+		role_id
+		, right_id
+		, created_time
+		) values(
+		#{create.roleId}
+		, #{create.rightId}
+		<choose>
+			<when test="create.createdTime != null">
+				, #{create.createdTime}
+			</when>
+			<otherwise>
+				, current_timestamp
+			</otherwise>
+		</choose>
+		)
+	</insert>
+
+	<!-- 删除角色权限语句 -->
+	<delete id="delete">
+		delete from t_role_right
+		where role_id = #{roleId}
+		and right_id = #{rightId}
+	</delete>
+
+</mapper>

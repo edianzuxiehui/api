@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 项目相关 -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xiehui</groupId>
+		<artifactId>api-permission</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>api-permission-util</artifactId>
+	<name>api-permission-util</name>
+	<description>API权限工具模块</description>
+
+	<!-- 依赖相关 -->
+	<dependencies>
+		<!-- JUnit相关 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Commons相关 -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		
+		<!-- 模块相关 -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>api-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 构建相关 -->
+	<build>
+		<finalName>api-permission-util</finalName>
+	</build>
+</project>

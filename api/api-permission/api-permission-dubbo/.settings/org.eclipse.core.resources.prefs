@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/resources=UTF-8
+encoding//src/main/webapp/WEB-INF/api-permission-dubbo-develop.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/api-permission-dubbo-online.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/api-permission-dubbo-stage.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/api-permission-dubbo-test.properties=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 菜单映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DMenuDAO">
+
+	<!-- 获取菜单语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DMenu">
+		select id
+		, parent_id
+		, status
+		, name
+		, href
+		, description
+		from t_menu
+		where id = #{id}
+	</select>
+
+	<!-- 获取菜单 -->
+	<select id="queryByuserId" resultType="com.xiehui.api.permission.repository.database.DMenu">
+		SELECT DISTINCT
+		menu.id,
+		menu.NAME,
+		menu.href,
+		menu.description,
+		menu.parent_id,
+		menu.status
+		FROM
+		t_user AS tu
+		LEFT JOIN t_role AS role ON tu.role_id = role.id
+		LEFT JOIN t_role_right AS rr
+		ON
+		rr.role_id = role.id
+		LEFT JOIN t_right AS tright ON tright.id = rr.right_id
+		LEFT JOIN t_menu AS menu ON menu.id =
+		tright.menu_id
+		where tu.id = #{id} and menu.status = 1
+	</select>
+
+	<!-- 获取菜单ID集合 -->
+	<select id="queryMenuIdByUserId" resultType="java.lang.Long">
+		select distinct ri.menu_id
+		from t_right ri
+		inner join t_role_right rr
+		on rr.right_id = ri.id
+		inner join t_user us
+		on us.role_id = rr.role_id
+		where us.id = #{id}
+	</select>
+
+	<!-- 获取菜单语句 -->
+	<select id="queryByStatus" resultType="com.xiehui.api.permission.repository.database.DMenu">
+		select id
+		, parent_id
+		, status
+		, name
+		, href
+		, description
+		from t_menu
+		where
+		status = #{status}
+	</select>
+
+	<!-- 获取菜单权限 -->
+	<select id="queryByuserIdAndUrl" resultType="java.lang.Integer">
+		SELECT DISTINCT
+		count(1) fun_count
+		FROM
+		t_user AS tu
+		LEFT JOIN t_role AS
+		role ON tu.role_id = role.id
+		LEFT JOIN t_role_right AS rr ON
+		rr.role_id = role.id
+		LEFT JOIN t_right AS tright ON
+		tright.id = rr.right_id
+		LEFT JOIN t_menu AS menu ON menu.id =
+		tright.menu_id
+		where tu.id = #{id}
+		AND menu.href = #{href}
+	</select>
+
+</mapper>
