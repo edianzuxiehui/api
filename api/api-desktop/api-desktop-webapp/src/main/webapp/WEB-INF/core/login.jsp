@@ -10,30 +10,34 @@
 	String root = path;
 %>
 
-<script type="text/javascript" src="js/md5.js"></script>
-<LINK href="images/login/User_Login.css" type=text/css rel=stylesheet>
-<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="themes/icon.css">
-<link rel="stylesheet" type="text/css" href="css/default.css">
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.bgiframe.js"></script>
-<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="js/Toolbar.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/md5.js"></script>
+<LINK href="<%=basePath%>images/login/User_Login.css" type="text/css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="<%=basePath%>themes/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=basePath%>themes/icon.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=basePath%>css/default.css">
+<script type="text/javascript" src="<%=basePath%>js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/jquery.bgiframe.js"></script>
+<script type="text/javascript"
+	src="<%=basePath%>js/jquery.easyui.min.js"></script>
+<script type="text/javascript"
+	src="<%=basePath%>js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/Toolbar.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/common.js"></script>
 <script language="JavaScript">
 	if (window != top)
 		top.location.href = location.href;
 </script>
 <script type="text/javascript">
 	function Login() {
-		alert("123123123");
 		if ((document.getElementById("loginname").value) != "") {
 			if (document.getElementById("pwd").value == "") {
 				document.getElementById("login_msg").innerHTML = "请输入密码！";
 				document.getElementById("pwd").focus();
 			} else {
-				alert("123");
 				login_();
 				return true;
 			}
@@ -47,16 +51,23 @@
 	function login_() {
 		var email = $('#loginname').val();
 		var password = $('#pwd').val();
-		$.ajax({
-			type : "POST",
-			url : "/permission/login",
-			async : false,
-			data : "email=" + email + "&password=" + password,
-			success : function(data) {
-				alert(data);
-
-			}
-		});
+		$
+				.ajax({
+					type : "POST",
+					url : "permission/login",
+					async : false,
+					data : "email=" + email + "&password=" + password,
+					success : function(data) {
+						var parsedJson = eval(data);
+						if (parsedJson.code != 0) {
+							document.getElementById("login_msg").innerHTML = parsedJson.message;
+						} else {
+							var retValue = openDialogFrame(getRootPath()
+									+ "/core/index.jsp",
+									"token=" + parsedJson.data + "&t=1", "850", "450");
+						}
+					}
+				});
 	}
 
 	function init() {

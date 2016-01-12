@@ -43,7 +43,7 @@
 	<!-- 视图分析 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
-		<property name="prefix" value="/WEB-INF/views/"></property>
+		<property name="prefix" value="/WEB-INF/core/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	<mvc:view-controller path="/" view-name="login" />
@@ -53,9 +53,8 @@
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/images/" mapping="/images/**" />
-	<mvc:resources location="/WEB-INF/plugin/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/core/" mapping="/core/**" />
-	<mvc:resources location="/WEB-INF/themes/" mapping="/thems/**" />
+	<mvc:resources location="/WEB-INF/themes/" mapping="/themes/**" />
 	<mvc:resources location="/WEB-INF/uaas/" mapping="/uaas/**" />
 
 	<!-- 拦截器 -->
