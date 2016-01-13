@@ -62,9 +62,8 @@
 						if (parsedJson.code != 0) {
 							document.getElementById("login_msg").innerHTML = parsedJson.message;
 						} else {
-							var retValue = openDialogFrame(getRootPath()
-									+ "/core/index.jsp",
-									"token=" + parsedJson.data + "&t=1", "850", "450");
+							window.location.href = "index?token="
+									+ parsedJson.data;
 						}
 					}
 				});
