@@ -157,8 +157,8 @@
 
 
 						<div style="position: absolute; bottom: 0; right: 0">
-							<a class="button">当前用户：${user.name}<b><a href="javascript:void(0)"
-									onclick="updatePWD()"></b></font>
+							<a class="button">当前用户：${user.name}<b><a
+									href="javascript:void(0)" onclick="updatePWD()"></b></font>
 							</a> <a class="easyui-linkbutton" plain="true"
 								iconCls="icon-indexundo"
 								onclick="javascript:relogin();return false;"><font
@@ -178,8 +178,25 @@
 		style="height:20px;text-align:center;padding:0px;position:relative;background:url('<%=basePath%>images/indexbg.png')">(建议在IE8、分辨率1024*768以上使用)</div>
 
 	<div region="west" title="导航菜单"
-		style="width: 170px; padding: 0px; overflow: hidden; border-bottom-width: 0px;">
+		style="width: 150px; padding: 0px; overflow: hidden; border-bottom-width: 0px;">
 		<div class="easyui-accordion" fit="true" border="false" id="nav">
+			<c:forEach items="${menuList}" var="accordMenu" varStatus="status">
+				<div title="${accordMenu.name}"
+					style="overflow: auto; padding: 10px;">
+					<div style="padding: 0px; text-align: left">
+						<c:forEach items="${accordMenu.childList}" var="subMenu">
+							<a style="text-decoration: none;">
+								<div
+									style="width: 60px; height: 6px; margin: auto auto auto auto; border: 0px dashed FFFFFF; background: FFFFFF; cursor: pointer; text-align: left">
+									<a style="text-decoration: none;"><br>${subMenu.name}
+									</a>
+								</div>
+							</a>
+							<br>
+						</c:forEach>
+					</div>
+				</div>
+			</c:forEach>
 
 		</div>
 	</div>

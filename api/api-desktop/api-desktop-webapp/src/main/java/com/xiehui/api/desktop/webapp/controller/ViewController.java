@@ -26,6 +26,8 @@ public class ViewController {
 
 	/** 索引视图 */
 	private static final String INDEX = "index";
+	/** 索引视图 */
+	private static final String LOGIN = "login";
 
 	/** 错误视图 */
 	private static final String ERROR = "error";
@@ -53,6 +55,33 @@ public class ViewController {
 
 			// 设置视图
 			mv.setViewName(INDEX);
+		} catch (Exception e) {
+			// 错误视图
+			mv.addObject("message", e.getMessage());
+			mv.setViewName(ERROR);
+		}
+
+		// 返回应答
+		return mv;
+	}
+
+	/**
+	 * 进入登录视图
+	 * 
+	 * @param myId
+	 *            我的标识
+	 * @return 模型视图
+	 */
+	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView LoginView() {
+		// 初始化
+		ModelAndView mv = new ModelAndView();
+
+		// 处理逻辑
+		try {
+
+			// 设置视图
+			mv.setViewName(LOGIN);
 		} catch (Exception e) {
 			// 错误视图
 			mv.addObject("message", e.getMessage());
