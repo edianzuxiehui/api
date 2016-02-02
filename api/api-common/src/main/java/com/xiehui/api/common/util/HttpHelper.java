@@ -224,8 +224,6 @@ public class HttpHelper {
 		}
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
-		// conn.setRequestProperty('Accept',
-		// 'text/xml,text/javascript,text/html,text/json')
 		conn.setRequestProperty("User-Agent", AGENT);
 		conn.setRequestProperty("Content-Type", contentType);
 		if (headerMap != null) {
