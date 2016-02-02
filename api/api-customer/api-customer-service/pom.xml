@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>api-customer-service</artifactId>
 	<name>api-customer-service</name>
-	<description>API客户服务模块</description>
+	<description>API客户服务模块</description> 
 
 	<!-- 依赖相关 -->
 	<dependencies>
