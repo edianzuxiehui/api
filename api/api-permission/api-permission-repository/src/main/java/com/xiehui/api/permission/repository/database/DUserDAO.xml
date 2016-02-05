@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 用户映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DUserDAO">
+
+	<!-- 获取用户语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DUser">
+		select id
+		, role_id
+		, status
+		, email
+		, password
+		, phone
+		, name
+		, avatar
+		, login_time
+		, login_ip
+		, login_secret
+		, description
+		, created_time
+		, modified_time
+		, additional
+		from t_user
+		where id = #{id}
+	</select>
+
+	<!-- 创建用户语句 -->
+	<insert id="create">
+		insert into t_user(
+		id
+		, role_id
+		, status
+		, email
+		, password
+		, phone
+		, name
+		<if test="create.avatar != null">
+			, avatar
+		</if>
+		<if test="create.loginTime != null">
+			, login_time
+		</if>
+		<if test="create.loginIp != null">
+			, login_ip
+		</if>
+		<if test="create.loginSecret != null">
+			, login_secret
+		</if>
+		<if test="create.description != null">
+			, description
+		</if>
+		<if test="create.additional != null">
+			, additional
+		</if>
+		, created_time
+		) values(
+		#{id}
+		, #{create.roleId}
+		, #{create.status}
+		, #{create.email}
+		, #{create.password}
+		, #{create.phone}
+		, #{create.name}
+		<if test="create.avatar != null">
+			, #{create.avatar}
+		</if>
+		<if test="create.loginTime != null">
+			, #{create.loginTime}
+		</if>
+		<if test="create.loginIp != null">
+			, #{create.loginIp}
+		</if>
+		<if test="create.loginSecret != null">
+			, #{create.loginSecret}
+		</if>
+		<if test="create.description != null">
+			, #{create.description}
+		</if>
+		<if test="create.additional != null">
+			, #{create.additional}
+		</if>
+		<choose>
+			<when test="create.createdTime != null">
+				, #{create.createdTime}
+			</when>
+			<otherwise>
+				, current_timestamp
+			</otherwise>
+		</choose>
+		)
+	</insert>
+
+	<!-- 修改用户语句 -->
+	<update id="modify">
+		update t_user
+		set modified_time=current_timestamp
+		<if test="modify.roleId != null">
+			, role_id = #{modify.roleId}
+		</if>
+		<if test="modify.status != null">
+			, status = #{modify.status}
+		</if>
+		<if test="modify.email != null">
+			, email = #{modify.email}
+		</if>
+		<if test="modify.password != null">
+			, password = #{modify.password}
+		</if>
+		<if test="modify.phone != null">
+			, phone = #{modify.phone}
+		</if>
+		<if test="modify.name != null">
+			, name = #{modify.name}
+		</if>
+		<if test="modify.avatar != null">
+			, avatar = #{modify.avatar}
+		</if>
+		<if test="modify.loginTime != null">
+			, login_time = #{modify.loginTime}
+		</if>
+		<if test="modify.loginIp != null">
+			, login_ip = #{modify.loginIp}
+		</if>
+		<if test="modify.loginSecret != null">
+			, login_secret = #{modify.loginSecret}
+		</if>
+		<if test="modify.description != null">
+			, description = #{modify.description}
+		</if>
+		<if test="modify.additional != null">
+			, additional = #{modify.additional}
+		</if>
+		where id = #{modify.id}
+	</update>
+	
+	<!-- 根据用户邮箱获取用户语句 -->
+	<select id="getByEmail" resultType="com.xiehui.api.permission.repository.database.DUser">
+		select id
+		, role_id
+		, status
+		, email
+		, password
+		, phone
+		, name
+		, avatar
+		, login_time
+		, login_secret
+		, description
+		, created_time
+		, modified_time
+		from t_user
+		where email = #{email}
+	</select>
+
+</mapper>

@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 工程相关 -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xiehui</groupId>
+		<artifactId>api-permission</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>api-permission-service</artifactId>
+	<name>api-permission-service</name>
+	<description>API权限服务模块</description>
+
+	<!-- 依赖相关 -->
+	<dependencies>
+		<!-- JUnit相关 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring相关 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- Jackson相关 -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+		</dependency>
+
+		<!-- Alibaba相关 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+		<!-- Dom4j相关 -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Quartz相关 -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+
+		<!-- 模块相关 -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>api-permission-util</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>api-permission-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>api-permission-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 构建相关 -->
+	<build>
+		<finalName>api-permission-service</finalName>
+	</build>
+</project>

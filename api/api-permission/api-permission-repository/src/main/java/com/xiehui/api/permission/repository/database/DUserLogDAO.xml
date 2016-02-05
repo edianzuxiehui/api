@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 用户日志映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DUserLogDAO">
+
+	<!-- 获取用户日志语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DUserLog">
+		select id
+		, user_id
+		, ip
+		, path
+		, parameters
+		, created_time
+		from t_user_log
+		where id = #{id}
+	</select>
+
+	<!-- 创建用户日志语句 -->
+	<insert id="create">
+		insert into t_user_log(
+		id
+		, user_id
+		, ip
+		, path
+		<if test="create.parameters != null">
+			, parameters
+		</if>
+		, created_time
+		) values(
+		#{id}
+		, #{create.userId}
+		, #{create.ip}
+		, #{create.path}
+		<if test="create.parameters != null">
+			, #{create.parameters}
+		</if>
+		<choose>
+			<when test="create.createdTime != null">
+				, #{create.createdTime}
+			</when>
+			<otherwise>
+				, current_timestamp
+			</otherwise>
+		</choose>
+		)
+	</insert>
+
+</mapper>

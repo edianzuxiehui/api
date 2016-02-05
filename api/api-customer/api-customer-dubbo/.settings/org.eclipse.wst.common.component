@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ecm-customer-dubbo">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="api-customer-api-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-customer-api/api-customer-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="api-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-common/api-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="api-customer-service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-customer-service/api-customer-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="api-customer-util-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-customer-util/api-customer-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="api-customer-repository-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/api-customer-repository/api-customer-repository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/ecm-customer-dubbo/target/classes"/>
+        <property name="context-root" value="api-customer-dubbo"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 项目相关 -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xiehui</groupId>
+		<artifactId>api</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>api-permission</artifactId>
+	<packaging>pom</packaging>
+	<name>api-permission</name>
+	<description>API权限模块</description>
+
+	<!-- 模块相关 -->
+	<modules>
+		<module>api-permission-util</module>
+		<module>api-permission-api</module>
+		<module>api-permission-repository</module>
+		<module>api-permission-service</module>
+		<module>api-permission-dubbo</module>
+	</modules>
+</project>

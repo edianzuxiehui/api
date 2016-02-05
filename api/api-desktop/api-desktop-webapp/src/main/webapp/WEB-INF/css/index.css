@@ -1,0 +1,53 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: small/1.5em Georgia,Serif; COLOR: #000; PADDING-TOP: 0px; voice-family: inherit
+}
+
+/*ͼƬ���ұ�*/
+.headerMenu {
+	FONT-SIZE: 93%; BACKGROUND: url(../images/logo_3.gif) no-repeat;    WIDTH: 100%; height:100% ;PADDING-BOTTOM: 0px;border:0px;border-color:red
+}
+
+.menu_navcc{width:100%; height:100%;margin:0 auto;border:0px;border-color:red}
+.menu_nav{width:100%;height:100%;background:url(../images/index/nav_bg.gif) repeat-x;}
+.menu_nav .nav_content{background:url(../images/index/nav_l_bg.gif) no-repeat;}
+.menu_nav .nav_content li{width:100px;height:25px;padding-left:11px;padding-right:13px;background:url(../images/index/nav_li_right.gif) no-repeat right center;float:left;line-height:25px;text-align:center;font-size:12px;font-weight:bold;}
+.menu_nav .nav_content li a{color:#fff;width:100px;height:20px;display:block;}
+.menu_nav .nav_content li.current{line-height:20px;}
+
+.menu_nav .nav_content li.current a,.menu_nav .nav_content li a:hover{width:100px;height:20px;background:url(../images/index/nav_li_current.gif) no-repeat;display:block;color:#fff;}
+.menu_nav .nav_content li a:hover{background:url(../images/index/nav_li_hover.gif) no-repeat;line-height:20px;text-decoration:none;}
+
+.menu_nav_right{background:url(../images/index/nav_r_bg.gif) no-repeat ;}
+p{
+margin-bottom:15px}
+
+/* button 
+---------------------------------------------- */
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	padding: .2em 1em .275em;
+	color:white;
+
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	position: relative;
+	text-decoration: none;
+	top: 1px;
+}
+
+.panel-body{overflow:hidden;}
+.panel-body .accordion-body{overflow:auto;}
+
+

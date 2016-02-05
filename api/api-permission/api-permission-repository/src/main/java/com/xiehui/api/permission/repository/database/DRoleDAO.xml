@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 角色映射 -->
+<mapper namespace="com.xiehui.api.permission.repository.database.DRoleDAO">
+
+	<!-- 获取角色语句 -->
+	<select id="get" resultType="com.xiehui.api.permission.repository.database.DRole">
+		select id
+		, status
+		, name
+		, description
+		, created_time
+		, modified_time
+		, additional
+		from t_role
+		where id = #{id}
+	</select>
+
+	<!-- 创建角色语句 -->
+	<insert id="create">
+		insert into t_role(
+		id
+		, status
+		, name
+		<if test="create.description != null">
+			, description
+		</if>
+		<if test="create.additional != null">
+			, additional
+		</if>
+		, created_time
+		) values(
+		#{id}
+		, #{create.status}
+		, #{create.name}
+		<if test="create.description != null">
+			, #{create.description}
+		</if>
+		<if test="create.additional != null">
+			, #{create.additional}
+		</if>
+		<choose>
+			<when test="create.createdTime != null">
+				, #{create.createdTime}
+			</when>
+			<otherwise>
+				, current_timestamp
+			</otherwise>
+		</choose>
+		)
+	</insert>
+
+	<!-- 修改角色语句 -->
+	<update id="modify">
+		update t_role
+		set modified_time=current_timestamp
+		<if test="modify.status != null">
+			, status = #{modify.status}
+		</if>
+		<if test="modify.name != null">
+			, name = #{modify.name}
+		</if>
+		<if test="modify.description != null">
+			, description = #{modify.description}
+		</if>
+		<if test="modify.additional != null">
+			, additional = #{modify.additional}
+		</if>
+		where id = #{modify.id}
+	</update>
+
+</mapper>

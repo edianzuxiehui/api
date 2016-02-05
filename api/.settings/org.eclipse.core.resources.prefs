@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//api-customer/api-customer-dubbo/src/main/webapp/WEB-INF/api-customer-dubbo-develop.properties=UTF-8
+encoding//api-customer/api-customer-dubbo/src/main/webapp/WEB-INF/api-customer-dubbo-online.properties=UTF-8
+encoding//api-customer/api-customer-dubbo/src/main/webapp/WEB-INF/api-customer-dubbo-stage.properties=UTF-8
+encoding//api-customer/api-customer-dubbo/src/main/webapp/WEB-INF/api-customer-dubbo-test.properties=UTF-8
+encoding/<project>=UTF-8
